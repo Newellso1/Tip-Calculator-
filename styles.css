@@ -1,0 +1,41 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+ }
+
+header, footer {
+    min-height: 40px;
+}
+
+header {
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+ main {
+    flex-grow: 1;
+    color: blue;
+ }
