@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <script></script>
     <title>Document</title>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script defer src="script.js"></script>
     <script src="https://kit.fontawesome.com/13e4364fd4.js" crossorigin="anonymous"></script>
 </head>
@@ -16,9 +18,44 @@
         <h1>TIP?</h1>
     </header>
     <main>
-       <div class="projectContainer">
-        
-       </div>
+        <div class="projectContainer">
+            <h2>What You 'ad?</h2>
+            <form name="Bill">
+                <div class="inputs">
+                    <input type="text" name="item" placeholder="">
+                    <input type="number" name="cost" placeholder="0.0">
+                </div>
+            </form>
+            <div class="buttons">
+                <div id="button"><i class="fa-solid fa-list"></i></div>
+                <div id="trash"><i class="fa-solid fa-trash"></i></div>
+            </div>
+            <div class="receipt">
+                <div class="receipt-item">
+                    <h5>Item</h5>
+                    <ul class="item-list">
+                        <li>Steak</li>
+                    </ul>
+                </div>
+                <div class="receipt-price">
+                    <h5>Cost</h5>
+                    <ul class="receipt-list">
+                        <li>10.00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="calculate">
+                <p>Bill Total: <span id="cost"></span></p>
+            </div>
+            <div class="tip">
+                <div id="poor"><i class="fa-regular fa-face-meh"></i></div>
+                <div id="good"><i class="fa-regular fa-face-grin"></i></div>
+                <div id="amazing"><i class="fa-regular fa-face-smile-beam"></i></div>
+            </div>
+            <div class="totalTip">
+                <p>Total w/ Tip: <span id="tipTotal"></span></p>
+            </div>
+        </div>
     </main>
     <footer>
         <ul>

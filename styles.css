@@ -1,41 +1,139 @@
- *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ input::-webkit-outer-spin-button,
+ input::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+ }
+
+ input[type=number] {
+     -moz-appearance: textfield;
  }
 
  body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+     display: flex;
+     flex-direction: column;
+     height: 100vh;
  }
 
-header, footer {
-    min-height: 40px;
-}
+ header,
+ footer {
+     min-height: 40px;
+ }
 
-header {
-    border: 1px solid;
-    display: flex;
-    justify-content: center;
-}
+ header {
+     border: 1px solid;
+     display: flex;
+     justify-content: center;
+ }
 
-footer {
-    border: 1px solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+ footer {
+     border: 1px solid;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
 
-footer ul li {
-    display: inline;
-}
+ footer ul li {
+     display: inline;
+ }
 
-footer a {
-    text-decoration: none;
-}
+ footer a {
+     text-decoration: none;
+ }
 
  main {
-    flex-grow: 1;
-    color: blue;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-grow: 1;
+
  }
+
+ /* tip calculator */
+
+ .projectContainer {
+     width: 340px;
+     height: 600px;
+     padding: 30px;
+     border: 1px solid;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+/* inputs */
+
+ .inputs {
+     display: flex;
+ }
+
+ .inputs input:nth-child(1) {
+
+ }
+
+ .inputs input:nth-child(2) {
+     width: 50px;
+ }
+
+ /* buttons */
+
+ .buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+ }
+
+/* receipt */
+
+.receipt {
+    border: 1px solid;
+    width: 230px;
+    height: 370px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.receipt-price {
+    width: 50px;
+    
+    background-color: rgb(231, 229, 229);
+}
+
+.receipt ul {
+    list-style: none;
+}
+
+/* Calculate */
+
+.calculate {
+    width: 100px;
+    height: 20px;
+    border: 1px solid
+}
+
+/* Tip */
+
+.tip {
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    border: 1px solid;
+}
+
+.tip i {
+    font-size: 30px;
+}
+
+/* Tip Total */
+
+.totalTip {
+    width: 100px;
+    height: 20px;
+    border: 1px solid
+}
