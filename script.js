@@ -16,7 +16,7 @@ $('#button').click(function () {
     var cost = $('#cost').val();
     $('.item-list').append('<li>' + item + '</li>');
     $('.receipt-list').append('<li>' + cost + '<li>');
-    let costNumber = parseInt($('input[name=cost]').val());
+    let costNumber = parseFloat($('input[name=cost]').val());
     receiptItems.push(costNumber);
     addBill(receiptItems);
     $('input[name=item]').val('');
@@ -27,10 +27,11 @@ $('#button').click(function () {
     $('#totalCost').html(billTotal);
 })
 
-// Clear List
+// Clear List & Total
 
 $('#trash').click(function () {
     $('.item-list li').remove();
     $('.receipt-list li').remove();
+    $('#totalCost').html('')
     receiptItems = [];
 });
