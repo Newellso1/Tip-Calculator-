@@ -1,139 +1,189 @@
- * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
- }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inconsolata", monospace;
+    letter-spacing: 1px;
+    color: rgb(53, 53, 53);
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: hsla(105, 17%, 95%, 1);
+    background: linear-gradient(
+      45deg,
+      hsla(105, 17%, 95%, 1) 16%,
+      hsla(244, 47%, 75%, 1) 100%
+    );
+    background: -moz-linear-gradient(
+      45deg,
+      hsla(105, 17%, 95%, 1) 16%,
+      hsla(244, 47%, 75%, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      45deg,
+      hsla(105, 17%, 95%, 1) 16%,
+      hsla(244, 47%, 75%, 1) 100%
+    );
+  
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F2F5F1", endColorstr="#A5A1DD", GradientType=1 );
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  header,
+  footer {
+    min-height: 40px;
+    background-color: #e8f4e499;
+    box-shadow: 0px 0px 4px 2px#5b785299;
+  }
+  
+  header {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+  }
 
- input::-webkit-outer-spin-button,
- input::-webkit-inner-spin-button {
-     -webkit-appearance: none;
-     margin: 0;
- }
-
- input[type=number] {
-     -moz-appearance: textfield;
- }
-
- body {
-     display: flex;
-     flex-direction: column;
-     height: 100vh;
- }
-
- header,
- footer {
-     min-height: 40px;
- }
-
- header {
-     border: 1px solid;
-     display: flex;
-     justify-content: center;
- }
-
- footer {
-     border: 1px solid;
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
-
- footer ul li {
-     display: inline;
- }
-
- footer a {
-     text-decoration: none;
- }
-
- main {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-grow: 1;
-
- }
-
- /* tip calculator */
-
- .projectContainer {
-     width: 340px;
-     height: 600px;
-     padding: 30px;
-     border: 1px solid;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: space-between;
- }
-
-/* inputs */
-
- .inputs {
-     display: flex;
- }
-
- .inputs input:nth-child(1) {
-
- }
-
- .inputs input:nth-child(2) {
-     width: 50px;
- }
-
- /* buttons */
-
- .buttons {
+  header h1 {
+    letter-spacing: 10px;
+  }
+  
+  footer {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer ul li {
+    display: inline;
+    
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: black;
+    margin: 0 34px
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  /* tip calculator */
+  
+  .projectContainer {
+    width: 340px;
+    height: 600px;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e8f4e499;
+    box-shadow: 2px 2px 4px 3px#5b785299;
+  }
+  
+  /* inputs */
+  
+  .inputs {
+    display: flex;
+    margin: 5px 0;
+  }
+  
+  .inputs input {
+    padding: 5px 1px;
+    margin: 1px;
+  }
+  
+  .inputs input:nth-child(2) {
+    width: 50px;
+  }
+  
+  /* buttons */
+  
+  .buttons {
     display: flex;
     justify-content: space-around;
     width: 200px;
- }
-
-/* receipt */
-
-.receipt {
-    border: 1px solid;
+    margin: 5px 0px;
+  }
+  
+  /* receipt */
+  
+  .receipt {
+    border-right: 2px solid rgba(0, 0, 0, 0.464);
+    border-left: 2px solid rgba(0, 0, 0, 0.464);
     width: 230px;
     height: 370px;
+    padding: 0 5px;
     display: flex;
     justify-content: space-between;
-}
-
-.receipt-price {
+    /* background-color: #e8f4e4; */
+  }
+  
+  .receipt-price {
     width: 50px;
-    
-    background-color: rgb(231, 229, 229);
-}
-
-.receipt ul {
+  }
+  
+  .receipt li {
+    font-size: 14px;
+  }
+  
+  .receipt ul {
     list-style: none;
-}
-
-/* Calculate */
-
-.calculate {
-    width: 100px;
+  }
+  
+  /* Calculate */
+  
+  .calculate {
+    min-width: 100px;
     height: 20px;
-    border: 1px solid
-}
-
-/* Tip */
-
-.tip {
+    margin: 5px 0;
+  }
+  
+  .calculate p {
+    text-align: center;
+  }
+  
+  /* Tip */
+  
+  .tip {
     display: flex;
     width: 200px;
     justify-content: space-around;
-    border: 1px solid;
-}
-
-.tip i {
+    margin: 5px 0;
+  }
+  
+  .tip i {
     font-size: 30px;
-}
-
-/* Tip Total */
-
-.totalTip {
-    width: 100px;
+  }
+  
+  /* Tip Total */
+  
+  .totalTip {
+    min-width: 100px;
     height: 20px;
-    border: 1px solid
-}
+    margin: 5px 0;
+  }
+  
+  .totalTip p {
+    text-align: center;
+  }
+  
